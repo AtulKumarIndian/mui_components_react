@@ -8,7 +8,7 @@ function Tabs() {
   const tabs = [
     { name: "profile", component: Profile },
     { name: "interests", component: Interests },
-    { name: "profile", component: Settings },
+    { name: "settings", component: Settings },
   ];
 
   const [data, setData] = useState({
@@ -20,7 +20,7 @@ function Tabs() {
     theme: "dark",
   });
 
-  const [activeTab, setActiveTab] = useState(0);
+  const [activeTab, setActiveTab] = useState(2);
 
   const ActiveTabComponent = tabs[activeTab].component;
   return (
@@ -33,6 +33,10 @@ function Tabs() {
       <div className="content-container">
         <ActiveTabComponent data={data} setData={setData}/>
       </div>
+      {activeTab > 0 && <button onClick={() => setActiveTab(activeTab-1)}>Prev</button>}
+      {activeTab === tabs.length-1 && <button onClick={() => console.log(data, "make Api calls")}>Save</button>}
+      {activeTab < tabs.length-1 && <button onClick={() => setActiveTab(activeTab+1)}>Next</button>}
+
     </div>
   );
 }
