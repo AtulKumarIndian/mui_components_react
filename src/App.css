@@ -1,8 +1,9 @@
 .App {
   position: relative;
-  height: 100vh;
+  height: 10px;
   display: flex;
   justify-content: center;
+  padding: 10%;
   align-items: center;
 }
 
@@ -20,4 +21,35 @@
 
 .move-button:hover {
   opacity: 0.8;
+}
+
+.main{
+  height: 100px;
+}
+.heading-container{
+  margin-top: auto;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  height: 100px;
+}
+.heading{
+  color: red;
+  font-size: 20px;
+  padding: 20px;
+  border-bottom: 1px dotted black;
+  border-right: 1px dotted black;
+}
+.content-container{
+  justify-content: center;
+  align-items: center;
+  height: 70vh;
+  border: 1px solid black;
+}
+.profile-container{
+  display: grid;
+  justify-content: left;
+  align-items: center;
+  padding-left: 20px;
+  
 }
