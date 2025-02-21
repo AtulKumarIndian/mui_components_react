@@ -2,6 +2,7 @@ import React,{useState} from "react";
 import Profile from "./Profile";
 import Interests from "./Interests";
 import Settings from "./Settings";
+import "./Tabs.css";
 
 function Tabs() {
   //create a config object to store the array of tabs
