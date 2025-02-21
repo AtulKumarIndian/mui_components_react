@@ -37,6 +37,7 @@ const Interests = ({ data, setData }) => {
       </label>
       <label className="interest">
         <input
+        className="input-box"
           type="checkbox"
           value="Dance"
           checked={interests.includes("Dance")}
